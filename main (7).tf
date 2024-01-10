@@ -4,12 +4,12 @@
 module "ec2_instances" {
   source = "./ec2-module"
 
-  instance_count   = 3
+  instance_count   = 2
   instance_type    = "t2.micro"
-  ami              = "ami-05c0f5389589545b7"  # Specify the desired AMI
-  key_name         = "demo-key" # Specify your SSH key pair name
-  subnet_id        = "subnet-0e41453c9b1028803"  # Specify the subnet ID where instances will be launched
-  security_group_ids = ["sg-028f18c61a04ac090"]  # Specify security group IDs
+  ami              = "ami-03f4878755434977f"  # Specify the desired AMI
+  key_name         = "public-cli-keypair" # Specify your SSH key pair name
+  subnet_id        = "subnet-0b4304641787d445a"  # Specify the subnet ID where instances will be launched
+  security_group_ids = ["sg-047229541250e8d82"]  # Specify security group IDs
 
   tags = [
     {
@@ -21,11 +21,4 @@ module "ec2_instances" {
       Terraform   = "true"
       Environment = "dev"
       Name        = "Jenkins-Slave"
-    },
-    {
-      Terraform   = "true"
-      Environment = "prod"
-      Name        = "Deployer"
     }
-  ]
-}
