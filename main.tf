@@ -11,7 +11,7 @@ module "ec2_instances" {
   subnet_id        = "subnet-0b4304641787d445a"  # Specify the subnet ID where instances will be launched
   security_group_ids = ["sg-047229541250e8d82"]  # Specify security group IDs
 
-  tags = [
+  tags = 
     {
       Terraform   = "true"
       Environment = "dev"
