@@ -3,7 +3,7 @@
 variable "instance_count" {
   description = "Number of EC2 instances to create"
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "instance_types" {
@@ -14,19 +14,19 @@ variable "instance_types" {
 variable "ami" {
   description = "Amazon Machine Image ID"
   type        = string
-  default     = "ami-05c0f5389589545b7"
+  default     = "ami-03f4878755434977f"
 }
 
 variable "key_name" {
   description = "SSH key pair name"
   type        = string
-  default     = "demo-key"
+  default     = "public-cli-keypair"
 }
 
 variable "subnet_id" {
   description = "ID of the subnet where instances will be launched"
   type        = string
-  default     = "subnet-0e41453c9b1028803"
+  default     = "subnet-0b4304641787d445a"
 }
 
 variable "security_group_ids" {
